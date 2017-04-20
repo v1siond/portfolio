@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '~> 2.3.3'
+ruby '2.3.3'
 
 gem 'rails', '~> 5.0.2'
 gem 'sass-rails', '~> 5.0.6'
@@ -45,7 +45,6 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 
 group :development do
-  gem 'pg'
   gem 'pre-commit', require: false
   gem 'rubocop', require: false
   gem 'rack-mini-profiler' # nice window showing request problems on all pages
@@ -60,7 +59,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pg'
   gem 'brakeman', require: false
   gem 'byebug'
   gem 'pry'
