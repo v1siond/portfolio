@@ -35,6 +35,7 @@ gem 'gravtastic'
 gem 'font-awesome-rails'
 gem 'purecss-sass', '~> 0.6.2'
 gem "react_on_rails", "~> 6"
+gem 'mini_racer', platforms: :ruby
 # Helpers for meta tags
 gem 'meta-tags'
 ## Slugs
@@ -94,3 +95,4 @@ group :production do
   gem 'rack-timeout'  
   gem 'rails_12factor'
 end
+
