@@ -1,0 +1,19 @@
+%br
+%br
+%br
+%br
+- if user_signed_in?
+  = link_to 'Sign out',  user_registration_path, class: 'pure-menu-link', method: :delete
+
+%h1 Visitors#index
+%p Find me in app/views/visitors/index.html.erb
+
+- if @projects
+  .projects
+    - @projects.each do |project|
+      %p= project.name
+
+- if @skills
+  .skills
+    - @skills.each do |skill|
+      %p= skill.name

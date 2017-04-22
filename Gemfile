@@ -29,6 +29,7 @@ gem 'render_anywhere', require: false
 ## Asset bits
 gem 'therubyracer'
 gem 'haml'
+gem "haml-rails", "~> 0.9"
 gem 'foundation-rails', '~> 6.1.2.0'
 gem 'foundation-icons-sass-rails'
 gem 'gravtastic'
@@ -52,6 +53,7 @@ group :development do
   gem 'guard', require: false
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
+  gem 'binding_of_caller'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
