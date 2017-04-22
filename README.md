@@ -1,24 +1,22 @@
-# README
+# Portfolio team [BETA]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Configuracion
 
-Things you may want to cover:
+Para correr el projecto sin problemas necesitaras primero que nada configurar el `.envrc` seteando las variables necesarias para el proyecto que hasta el momento son estas que mostrare en el ejemplo abajo:
 
-* Ruby version
+```
+# PG
+export PGUSER=xxxxxx
+export PGPASSWORD=xxxxx
 
-* System dependencies
+# Admin user
+export EMAIL=xxxxx
+export PASSWORD=xxxxx
+```
+Luego de configurar el `.envrc` colocamos las siguientes lineas en una consola [linux]:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+bundle install
+rake db:create; rake db:migrate; rake db:seed
+```
+Una vez realizado este procedimiento con exito, podremos correr el proyecto localmente; Y para entrar con nuestra cuenta admin que seria la que colocamos en nuestro `.envrc` solo tendremos que colocar esta ruta `http://localhost:3000/users/sign_in` e igresar sus  datos.
