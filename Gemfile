@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '~> 2.3.3'
+ruby '2.3.3'
 
 gem 'rails', '~> 5.0.2'
 gem 'sass-rails', '~> 5.0.6'
@@ -29,6 +29,7 @@ gem 'render_anywhere', require: false
 ## Asset bits
 gem 'therubyracer'
 gem 'haml'
+gem "haml-rails", "~> 0.9"
 gem 'foundation-rails', '~> 6.1.2.0'
 gem 'foundation-icons-sass-rails'
 gem 'gravtastic'
@@ -45,7 +46,6 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 
 group :development do
-  gem 'pg'
   gem 'pre-commit', require: false
   gem 'rubocop', require: false
   gem 'rack-mini-profiler' # nice window showing request problems on all pages
@@ -53,6 +53,7 @@ group :development do
   gem 'guard', require: false
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
+  gem 'binding_of_caller'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -60,7 +61,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pg'
   gem 'brakeman', require: false
   gem 'byebug'
   gem 'pry'
