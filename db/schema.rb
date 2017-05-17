@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20170422173407) do
 
   create_table "skills", force: :cascade do |t|
     t.string   "name"
-    t.integer  "starts"
+    t.integer  "stars"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
