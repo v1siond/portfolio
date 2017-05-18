@@ -1,3 +1,21 @@
+@keyframes bounce-prev {
+  0% {
+    bottom: 7.5%;
+  }
+  100% {
+    bottom: 8.5%;
+  }
+}
+
+@keyframes bounce-next {
+  0% {
+    bottom: 2.5%;
+  }
+  100% {
+    bottom: 3.5%;
+  }
+}
+
 .home,
 .contact,
 .skill-list,
@@ -16,6 +34,29 @@
 .experience {
   border: .5rem solid grey;
   border-top: none;
+}
+
+.next-section,
+.prev-section {
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  right: 5%;
+}
+
+.next-section {
+  bottom: 2.5%;
+  &:hover {
+    animation: bounce-next .5s infinite alternate;
+  }
+}
+
+.prev-section {
+  bottom: 7.5%;
+  &:hover {
+    animation: bounce-prev .5s infinite alternate;
+  }
 }
 
 .home {
@@ -225,6 +266,9 @@
 }
 
 .contact {
+  .prev-section {
+    color: $astronaut;
+  }
   #contact-form {
     color: white;
     background: $astronaut;
