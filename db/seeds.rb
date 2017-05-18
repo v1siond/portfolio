@@ -7,5 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Creating the admin user
-user = User.create(role: 'admin', email: ENV["EMAIL"], password: ENV["PASSWORD"])
+user = User.find_or_create_by!(email: ENV["EMAIL"]) do |user|
+        user.password = ENV["PASSWORD"]
+        user.password_confirmation = ENV["PASSWORD"]
+        user.admin!
+      end
 puts "User admin created successful -> email: #{user.email}"
