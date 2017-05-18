@@ -1,0 +1,28 @@
+// ========== Fonts ==========
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic');
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
+
+$primary-font-family: 'Lato', Helvetica, Arial, sans-serif, FontAwesome;
+$secondary-font-family: 'Oxygen', Helvetica, sans-serif;
+$medium-font-size: 0.75rem;
+$small-font-size: 0.5rem;
+
+// ========== Breakpoint ==========
+$n_xs: 20em; // extra small devices
+$x-sm: 30em; // for mobile 480px+
+$n_sm: 35.5em; // small devices
+$n_md: 48em; // medium size devices
+$n_lg: 64em; // big size devices
+$n_xl: 80em; // desktop
+
+// ========== Colours ==========
+// please use http://chir.ag/projects/name-that-color for names
+$astronaut: #001A71; // strong blue
+$dd_blue: #0055B8; // light blue
+$buttercup: #FF5F00; // orange button
+$red_sun: #FF4338; // red star
+
+// ========== skew degres and background offset ===========
+
+$skewDeg: 2.5deg;
+$offset: 2rem;

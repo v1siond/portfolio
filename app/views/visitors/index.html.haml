@@ -1,88 +1,189 @@
 #layout.pure-g
-  .sidebar.pure-u-1.pure-u-md-1-4
-    .header
-      %h1.brand-title Moises Torres
-      %img.post-avatar{:alt => "Tilo Mitra's avatar", :height => "180", :width => "180", :src => "https://avatars3.githubusercontent.com/u/19172129?v=3&s=460"}/
-      %h2.brand-tagline Software Developer
-      %nav.nav
-        %ul.nav-list
-          %li.nav-item
-            %a.pure-button{target: "_blank", :href => "https://github.com/loldlm1"} Github
-  
-  .content.pure-u-1.pure-u-md-3-4
-    %div
-      / A wrapper for all the blog posts
-      .posts
-        %h1.content-subhead Pinned Post
-        / A single blog post
-        %section.post
-          %header.post-header
-            %img.post-avatar{:alt => "Tilo Mitra's avatar", :height => "48", :src => "img/common/tilo-avatar.png", :width => "48"}/
-            %h2.post-title Introducing Pure
-            %p.post-meta
-              By
-              %a.post-author{target: "_blank", :href => "#"} Tilo Mitra
-              under
-              %a.post-category.post-category-design{target: "_blank", :href => "#"} CSS
-              %a.post-category.post-category-pure{target: "_blank", :href => "#"} Pure
-          .post-description
-            %p
-              Yesterday at CSSConf, we launched Pure – a new CSS library. Phew! Here are the
-              = succeed "." do
-                %a{target: "_blank", :href => "https://speakerdeck.com/tilomitra/pure-bliss"} slides from the presentation
-      .posts
-        %h1.content-subhead Recent Posts
-        %section.post
-          %header.post-header
-            %img.post-avatar{:alt => "Eric Ferraiuolo's avatar", :height => "48", :src => "img/common/ericf-avatar.png", :width => "48"}/
-            %h2.post-title Everything You Need to Know About Grunt
-            %p.post-meta
-              By
-              %a.post-author{target: "_blank", :href => "#"} Eric Ferraiuolo
-              under
-              %a.post-category.post-category-js{target: "_blank", :href => "#"} JavaScript
-          .post-description
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        %section.post
-          %header.post-header
-            %img.post-avatar{:alt => "Reid Burke's avatar", :height => "48", :src => "img/common/reid-avatar.png", :width => "48"}/
-            %h2.post-title Photos from CSSConf and JSConf
-            %p.post-meta
-              By
-              %a.post-author{target: "_blank", :href => "#"} Reid Burke
-              under
-              %a.post-category{target: "_blank", :href => "#"} Uncategorized
-          .post-description
-            .post-images.pure-g
-              .pure-u-1.pure-u-md-1-2
-                %a{target: "_blank", :href => "http://www.flickr.com/photos/uberlife/8915936174/"}
-                  %img.pure-img-responsive{:alt => "Photo of someone working poolside at a resort", :src => "http://farm8.staticflickr.com/7448/8915936174_8d54ec76c6.jpg"}/
-                .post-image-meta
-                  %h3 CSSConf Photos
-              .pure-u-1.pure-u-md-1-2
-                %a{target: "_blank", :href => "http://www.flickr.com/photos/uberlife/8907351301/"}
-                  %img.pure-img-responsive{:alt => "Photo of the sunset on the beach", :src => "http://farm8.staticflickr.com/7382/8907351301_bd7460cffb.jpg"}/
-                .post-image-meta
-                  %h3 JSConf Photos
-        %section.post
-          %header.post-header
-            %img.post-avatar{:alt => "Andrew Wooldridge's avatar", :height => "48", :src => "img/common/andrew-avatar.png", :width => "48"}/
-            %h2.post-title YUI 3.10.2 Released
-            %p.post-meta
-              By
-              %a.post-author{target: "_blank", :href => "#"} Andrew Wooldridge
-              under
-              %a.post-category.post-category-yui{target: "_blank", :href => "#"} YUI
-          .post-description
-            %p
-              We are happy to announce the release of YUI 3.10.2! You can find it now on the Yahoo! CDN, download it directly, or pull it in via npm. We’ve also updated the YUI Library website with the latest documentation.
-      .footer
-        .pure-menu.pure-menu-horizontal
-          %ul
-            %li.pure-menu-item
-              %a.pure-menu-link{target: "_blank", :href => "http://purecss.io/"} About
-            %li.pure-menu-item
-              %a.pure-menu-link{target: "_blank", :href => "http://twitter.com/yuilibrary/"} Twitter
-            %li.pure-menu-item
-              %a.pure-menu-link{target: "_blank", :href => "http://github.com/yahoo/pure/"} GitHub
+  .content.pure-u-1
+    %section.home.pure-u-1
+      .sidebar.pure-u-1.pure-u-lg-1-4
+        .header
+          %h2.brand-avatar
+            %img.post-avatar{:alt => "Avatar", :src => "https://vignette2.wikia.nocookie.net/onepiece/images/6/61/Estatua_de_cera_de_Luffy.png/revision/latest?cb=20121231203632&path-prefix=es"}
+          %h2.brand-tagline About Me
+          .text
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      .presentation.pure-u-3-4
+        %h1.brand-title.pure-u-1
+          Moises Torres
+        %h2.brand-tagline
+          Backend Developer
+    %section.skills.pure-u-1
+      %div.pure-u-1.title-container
+        %h2.brand-tagline
+          Professional Skills
+        .quote.pure-u-1
+          %q There are no secrets to success. It is the result of preparation, hard work, and learning from failure.
+          %span -Colin Powell
+      .skill-list.pure-u-1
+        .skills-left.pure-u-1.pure-u-lg-1-2
+          %ul.skill-description.pure-u-1
+            %li.skill.pure-u-1
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                HTML5
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+            %li.skill.pure-u-1
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                RUBY
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+            %li.skill.pure-u-1
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                HAML
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+            %li.skill.pure-u-1
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                JASMINE
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+            %li.skill.pure-u-1
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                CAPYBARA
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+            %li.skill.pure-u-1
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                WEBPACK
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+        .skills-right.pure-u-1.pure-u-lg-1-2
+          %ul.skill-description.pure-u-1
+            %li.skill.pure-u-1
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                RAILS
+            %li.skill.pure-u-1
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                JAVASCRIPT
+            %li.skill.pure-u-1
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                JQUERY
+            %li.skill.pure-u-1
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                REACT
+            %li.skill.pure-u-1
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                CSS
+            %li.skill.pure-u-1
+              .skill-level.pure-u-1.pure-u-lg-3-4
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+              %h4.skill-name.pure-u-1.pure-u-lg-1-4
+                ANGULAR
+    %section.experience
+      .title-container.pure-u-1
+        %h2.brand-tagline
+          Work Experience
+      .work-list.pure-u-1
+        .work.left.pure-u-1.pure-u-lg-7-24
+          %header
+            %h4.work-name
+              DailyDrip
+          .job-desacription
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .work.center.pure-u-1.pure-u-lg-7-24
+          %header
+            %h4.work-name
+              DailyDrip
+          .job-desacription
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .work.right.pure-u-1.pure-u-lg-7-24
+          %header
+            %h4.work-name
+              DailyDrip
+          .job-desacription
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    %section.contact
+      = form_tag '#', autocomplete: "off", id: "contact-form", class: "pure-form pure-u-1 pure-u-lg-1-2" do
+        %h2.pure-u-1.brand-tagline
+          Contact
+        .pure-u-1.fields
+          %dl.inline
+            = label_tag(:name, :name , :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
+            = text_field_tag "name:", params[:name], autocomplete: "off", tabindex: '1', :class => 'pure-u-1 pure-u-lg-3-4 contact-input'
+          %dl.inline.contact-email
+            = label_tag(:email, :email, :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
+            = text_field_tag "email:", params[:email], autocomplete: "off", tabindex: '2', :class => 'pure-u-1 pure-u-lg-3-4 contact-input'
+          %dl.inline.contact-email
+            = label_tag(:message, :message, :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
+            = text_area_tag "message:", params[:message], autocomplete: "off", tabindex: '2', :class => 'pure-u-1 pure-u-lg-3-4 contact-area'
+          %dl.inline.contact-email
+            .pure-u-1-4
+            = submit_tag "submit", class: "pure-button contact-button pure-u-1 pure-u-lg-3-4"
+        .footer
+          .pure-menu.pure-menu-horizontal
+            %ul
+              %li.pure-menu-item
+                %a.pure-menu-link{target: "_blank", :href => "#"} Home
+              %li.pure-menu-item
+                %a.pure-menu-link{target: "_blank", :href => ""} Twitter
+              %li.pure-menu-item
+                %a.pure-menu-link{target: "_blank", :href => ""} GitHub
+      .decoration-icons.pure-u-1.pure-u-lg-1-2
+        .envelope
+          %i.fa.fa-envelope
+        .mobile
+          %i.fa.fa-mobile

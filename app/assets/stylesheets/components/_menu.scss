@@ -1,0 +1,22 @@
+.sidebar {
+  background: $astronaut;
+  text-align: center;
+  @include lg {
+    color: white;
+    height: 100vh;
+  }
+  .header {
+    padding: 1rem 2rem;
+  }
+  .text {
+    text-align: justify;
+  }
+  .brand-avatar {
+    width: 7.5rem;
+    margin: 1rem auto;
+    img {
+      border-radius: 50%;
+      height: 7rem;
+    }
+  }
+}

@@ -1,2 +1,16 @@
+//Dependencies
+
 @import 'purecss';
-@import './blog';
+@import "font-awesome";
+@import './components/normalize';
+@import './variables';
+@import './tools';
+@import './helpers';
+@import './base';
+@import './components/footer';
+@import './components/menu';
+
+
+//Specific layout
+
+@import './marketing/home';
