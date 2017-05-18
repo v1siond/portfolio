@@ -16,26 +16,58 @@
 //= require_tree .
 
 jQuery(document).ready(function($) {
-  jQuery.fn.extend({
-    scrollTo : function(speed, easing) {
-      return this.each(function() {
-        var targetOffset = $(this).offset().top;
-        $('html,body').animate({scrollTop: targetOffset}, speed, easing);
-      });
+  var sections = $('section');
+  var i =0;
+  var scrolto = 0;
+  $('.prev-section').hide();
+  function next(){
+
+    if(i == 0){
+      $('.prev-section').show();
+    }
+    if(i < sections.length -1){
+      i++;
+      if(i == sections.length -1){
+        $('.next-section').hide();
+        $('.prev-section').css('color', '#001A71');
+      }
+       $('html, body').animate({
+        scrollTop: sections[i].offsetTop
+      }, 2000);
+    }else{
+      alert('end reached');
+    }
+  }
+  function prev(){
+    if(i == sections.length -1){
+      $('.next-section').show();
+      $('.prev-section').css('color', 'white');
+    }
+    if(i > 0){
+      i--;
+      if(i == 0){
+        $('.prev-section').hide();
+      }
+       $('html, body').animate({
+        scrollTop: sections[i].offsetTop
+      }, 2000);
+    }
+  }
+  $('html').keydown(function(e){
+    if(e.which == '38'){
+      prev();
+    }
+   if(e.which == '40'){
+      next();
     }
   });
-
   $('.next-section').click(function(e){
-      e.preventDefault();
-      var $this = $(this),
-          $next = $this.parent().next();
-      $next.scrollTo(1000, 'linear');
+     e.preventDefault();
+     next();
   });
 
   $('.prev-section').click(function(e){
-      e.preventDefault();
-      var $this = $(this),
-          $prev = $this.parent().prev();
-      $prev.scrollTo(1000, 'linear');
+     e.preventDefault();
+     prev();
   });
 });
