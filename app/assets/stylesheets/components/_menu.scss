@@ -1,0 +1,30 @@
+.sidebar {
+  background: $astronaut;
+  color: white;
+  order: 2;
+  text-align: center;
+  @include lg {
+    height: 100vh;
+    order: 1;
+  }
+  .header {
+    padding: 1rem 2rem;
+    .brand-tagline {
+      font-family: $primary-font-family;
+      font-weight: 400;
+      letter-spacing: .5rem;
+    }
+  }
+  .text {
+    font-family: $primary-font-family;
+    text-align: justify;
+  }
+  .brand-avatar {
+    width: 7.5rem;
+    margin: 1rem auto;
+    img {
+      border-radius: 50%;
+      height: 7rem;
+    }
+  }
+}

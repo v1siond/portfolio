@@ -1,0 +1,50 @@
+// ========== Fonts ==========
+@font-face {
+  font-family: 'Chalet';
+  src: url(font-path('Chalet-regular.eot'));
+  src: url(font-path('Chalet-regular.eot')),
+       url(font-path('Chalet-regular.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('Chalet-regular.woff2')) format('woff2'),
+       url(font-path('Chalet-regular.woff')) format('woff'),
+       url(font-path('Chalet-regular.ttf'))  format('truetype'),
+       url(font-path('Chalet-regular.svg') + "#montserratregular") format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Corbel';
+  src: url(font-path('corbel-regular.eot'));
+  src: url(font-path('corbel-regular.eot')),
+       url(font-path('corbel-regular.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('corbel-regular.woff2')) format('woff2'),
+       url(font-path('corbel-regular.woff')) format('woff'),
+       url(font-path('corbel-regular.ttf'))  format('truetype'),
+       url(font-path('corbel-regular.svg') + "#montserratregular") format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+$primary-font-family: 'Corbel', Helvetica, Arial, sans-serif;
+$secondary-font-family: 'Chalet', Helvetica, sans-serif;
+$medium-font-size: 0.75rem;
+$small-font-size: 0.5rem;
+
+// ========== Breakpoint ==========
+$n_xs: 20em; // extra small devices
+$x-sm: 30em; // for mobile 480px+
+$n_sm: 35.5em; // small devices
+$n_md: 48em; // medium size devices
+$n_lg: 64em; // big size devices
+$n_xl: 80em; // desktop
+
+// ========== Colours ==========
+// please use http://chir.ag/projects/name-that-color for names
+$astronaut: #001A71; // strong blue
+$dd_blue: #0055B8; // light blue
+$buttercup: #FF5F00; // orange button
+$red_sun: #FF4338; // red star
+
+// ========== skew degres and background offset ===========
+
+$skewDeg: 2.5deg;
+$offset: 2rem;

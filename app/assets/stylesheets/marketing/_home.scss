@@ -1,0 +1,303 @@
+.home,
+.contact,
+.skill-list,
+.skill,
+.presentation {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.home,
+.skills,
+.contact,
+.experience {
+  border: .5rem solid grey;
+  border-top: none;
+}
+
+.home {
+  background: $dd_blue;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.presentation {
+  border: none;
+  min-height: 100vh;
+  order: 1;
+  @include lg {
+    min-height: auto;
+    order: 2;
+  }
+  .brand-title {
+    color: white;
+    font-family: $secondary-font-family;
+    font-size: 2.5rem;
+    letter-spacing: .75rem;
+    margin: 0;
+    text-transform: uppercase;
+    @include lg {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.presentation,
+.skills,
+.experience,
+.contact {
+  .brand-tagline {
+    color: white;
+    border-top: .1rem solid white;
+    border-bottom: .1rem solid white;
+    display: inline-block;
+    font-family: $primary-font-family;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: .5rem;
+    @include lg {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.skills {
+  align-items: flex-start;
+  background: $astronaut;
+  min-height: 100vh;
+  .quote {
+    color: white;
+    font-family: $primary-font-family;
+    padding: 0 5%;
+    q {
+      font-style: italic;
+    }
+    span {
+      display: block;
+    }
+  }
+  .title-container {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .skills-left {
+    position: relative;
+    @include lg {
+      &:before {
+        background: $dd_blue;
+        content: '';
+        height: 100%;
+        position: absolute;
+        right: -.6rem;
+        width: 1.2rem;
+      }
+    }
+  }
+  .skill {
+    margin-bottom: 1rem;
+  }
+  .skill-name {
+    background: $dd_blue;
+    color: white;
+    font-family: $primary-font-family;
+    margin: 0;
+    padding: .5rem 0;
+  }
+  .skills-left .skill-name {
+    box-shadow: 5px 5px 1px rgba(black, .6);
+  }
+  .skills-right .skill-name {
+    box-shadow: -5px 5px 1px rgba(black, .6);
+  }
+  .skill-level, .map i {
+    color: $buttercup;
+    font-size: 2rem;
+  }
+  .skill-list {
+    height: 65%;
+    .skills-left,
+    .skills-right {
+      height: 100%;
+    }
+    .skills-right {
+      margin-top: 2rem;
+      @include lg {
+        margin-top: 0;
+      }
+    }
+  }
+  .skill-description {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .skills-map {
+    align-items: flex-start;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    @include lg {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-left: 0;
+    }
+    .map {
+      list-style: none;
+      margin-left: 2rem;
+      @include lg {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.experience {
+  background-color: $dd_blue;
+  min-height: 100vh;
+  .title-container {
+    align-items: center;
+    background-color: $astronaut;
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+  }
+  .work-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .work {
+      border: .15rem solid $buttercup;
+      color: white;
+      font-family: $primary-font-family;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-top: 1rem;
+      padding: 1rem;
+      position: relative;
+      &:before {
+        background: black;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+      .work-background {
+        height: 100%;
+        left: 0;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      header {
+        font-family: $secondary-font-family;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+      .work-name {
+        font-family: $primary-font-family;
+        margin: .5rem 0;
+      }
+      .job-description {
+        font-family: $primary-font-family;
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.contact {
+  #contact-form {
+    color: white;
+    background: $astronaut;
+    min-height: 100vh;
+    .brand-tagline {
+      border: none;
+      padding: 0;
+    }
+  }
+  .fields {
+    padding: 0 7.5%;
+  }
+  .inline {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    .contact-label {
+      font-family: $primary-font-family;
+      font-size: 1.5rem;
+      margin: 0;
+      text-transform: capitalize;
+    }
+    .contact-input,
+    .contact-area {
+      background: rgba(grey, .6);
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      color: white;
+      font-family: $primary-font-family;
+      outline: none;
+      padding: 1rem;
+    }
+    .contact-area {
+      min-height: 15rem;
+      max-height: 15rem;
+    }
+  }
+  .contact-button {
+    background: $buttercup;
+    border-radius: 0;
+    color: white;
+    font-family: $primary-font-family;
+    padding: .5rem;
+    text-transform: uppercase;
+    width: 50%;
+    &:hover {
+      background: $dd_blue;
+      transition: all .5s;
+    }
+  }
+  .footer {
+    padding: 0 7.5%;
+    text-align: left;
+  }
+  .footer .pure-menu-link {
+    color: white;
+    font-family: $primary-font-family;
+    text-transform: uppercase;
+    &:hover {
+      background: $buttercup;
+      transition: all .5s;
+    }
+  }
+  .decoration-icons {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    i {
+      color: $dd_blue;
+      font-size: 12.5rem;
+    }
+  }
+}

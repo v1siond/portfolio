@@ -1,0 +1,118 @@
+#layout.pure-g
+  .content.pure-u-1
+    %section.home.pure-u-1
+      .sidebar.pure-u-1.pure-u-lg-1-4
+        .header
+          %h2.brand-avatar
+            %img.post-avatar{:alt => "Avatar", :src => "https://avatars3.githubusercontent.com/u/19172129?v=3&s=460"}
+          %h2.brand-tagline About Me
+          .text
+            %p I'm a developer, all my life I’ve been fascinated by technology and how we can improve this every day. The first day that I started learning Ruby I loved it and I knew that this is what I wanted to do! Now I truly feel like a Ruby on Rails engineer by all I've learned in my jobs.
+      .presentation.pure-u-1.pure-u-lg-3-4
+        %div
+          %h1.brand-title.pure-u-1
+            Moises Torres
+          %h2.brand-tagline
+            Backend Developer
+    %section.skills.pure-u-1
+      %div.pure-u-1.title-container
+        %h2.brand-tagline
+          Professional Skills
+        .quote.pure-u-1
+          %q There are no secrets to success. It is the result of preparation, hard work, and learning from failure.
+          %span -Colin Powell
+      .skill-list.pure-u-1
+        
+        .skills-left.pure-u-1.pure-u-lg-1-2
+          %ul.skill-description.pure-u-1
+            - @back_end_skills.each do |skill|
+              %li.skill.pure-u-1
+                %h4.skill-name.pure-u-1-4
+                  = skill.name
+                .skill-level.pure-u-3-4
+                  - star = skill.stars.to_i
+                  - 1.upto(star) do
+                    %i.fa.fa-star
+            
+        .skills-right.pure-u-1.pure-u-lg-1-2
+          %ul.skill-description.pure-u-1
+            - @front_end_skills.each do |skill|
+              %li.skill.pure-u-1
+                .skill-level.pure-u-3-4
+                  - star = skill.stars.to_i
+                  - 1.upto(star) do
+                    %i.fa.fa-star
+                %h4.skill-name.pure-u-1-4
+                  = skill.name
+            
+        %ul.skills-map.pure-u-1
+          %li.map
+            %i.fa.fa-star
+            %span Beginner
+          %li.map
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %span Decent
+          %li.map
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %span Good
+          %li.map
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %span Advanced
+          %li.map
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %span Expert
+    
+    %section.experience
+      .title-container.pure-u-1
+        %h2.brand-tagline
+          Work Experience
+      .work-list.pure-u-1
+        - @projects.each do |project|
+          .work.left.pure-u-1.pure-u-lg-7-24
+            %figure.work-background
+              = image_tag(project.image_link.present? ? project.image_link : 'https://udemy-images.udemy.com/course/750x422/372518_57c2_6.jpg')
+            %header
+              %h4.work-name
+                = project.name
+            .job-description
+              %p= project.description
+
+    %section.contact
+      = form_tag contact_me_path, autocomplete: "off", id: "contact-form", class: "pure-form pure-u-1 pure-u-lg-1-2" do
+        %h2.pure-u-1.brand-tagline
+          Contact
+        .pure-u-1.fields
+          %dl.inline
+            = label_tag(:name, :name , :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
+            = text_field_tag "name", params[:name], autocomplete: "off", tabindex: '1', :class => 'pure-u-1 pure-u-lg-3-4 contact-input'
+          %dl.inline.contact-email
+            = label_tag(:email, :email, :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
+            = text_field_tag "email", params[:email], autocomplete: "off", tabindex: '2', :class => 'pure-u-1 pure-u-lg-3-4 contact-input'
+          %dl.inline.contact-email
+            = label_tag(:message, :message, :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
+            = text_area_tag "message", params[:message], autocomplete: "off", tabindex: '2', :class => 'pure-u-1 pure-u-lg-3-4 contact-area'
+          %dl.inline.contact-email
+            .pure-u-1-4
+            = submit_tag "submit", class: "pure-button contact-button pure-u-1 pure-u-lg-3-4"
+        .footer
+          .pure-menu.pure-menu-horizontal
+            %ul
+              %li.pure-menu-item
+                %a.pure-menu-link{target: "_blank", :href => "https://github.com/loldlm1"} GitHub
+              %li.pure-menu-item
+                %a.pure-menu-link{target: "_blank", :href => "https://angel.co/loldlm"} Angel
+      .decoration-icons.pure-u-1.pure-u-lg-1-2
+        .envelope
+          %i.fa.fa-envelope
+        .mobile
+          %i.fa.fa-mobile
