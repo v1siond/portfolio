@@ -20,17 +20,28 @@
 
 .home {
   background: $dd_blue;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .presentation {
   border: none;
+  min-height: 100vh;
+  order: 1;
+  @include lg {
+    min-height: auto;
+    order: 2;
+  }
   .brand-title {
     color: white;
     font-family: $secondary-font-family;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     letter-spacing: .75rem;
     margin: 0;
     text-transform: uppercase;
+    @include lg {
+      font-size: 3.5rem;
+    }
   }
 }
 
@@ -44,9 +55,12 @@
     border-bottom: .1rem solid white;
     display: inline-block;
     font-family: $primary-font-family;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 400;
     padding: .5rem;
+    @include lg {
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -56,6 +70,8 @@
   min-height: 100vh;
   .quote {
     color: white;
+    font-family: $primary-font-family;
+    padding: 0 5%;
     q {
       font-style: italic;
     }
@@ -69,20 +85,25 @@
   }
   .skills-left {
     position: relative;
-    &:before {
-      background: $dd_blue;
-      content: '';
-      height: 100%;
-      position: absolute;
-      right: -.6rem;
-      width: 1.2rem;
+    @include lg {
+      &:before {
+        background: $dd_blue;
+        content: '';
+        height: 100%;
+        position: absolute;
+        right: -.6rem;
+        width: 1.2rem;
+      }
     }
+  }
+  .skill {
+    margin-bottom: 1rem;
   }
   .skill-name {
     background: $dd_blue;
     color: white;
     font-family: $primary-font-family;
-    margin: 0 0 1rem;
+    margin: 0;
     padding: .5rem 0;
   }
   .skills-left .skill-name {
@@ -91,7 +112,7 @@
   .skills-right .skill-name {
     box-shadow: -5px 5px 1px rgba(black, .6);
   }
-  .skill-level {
+  .skill-level, .map i {
     color: $buttercup;
     font-size: 2rem;
   }
@@ -101,6 +122,12 @@
     .skills-right {
       height: 100%;
     }
+    .skills-right {
+      margin-top: 2rem;
+      @include lg {
+        margin-top: 0;
+      }
+    }
   }
   .skill-description {
     align-items: center;
@@ -109,6 +136,25 @@
     flex-wrap: wrap;
     height: 100%;
     justify-content: space-between;
+  }
+  .skills-map {
+    align-items: flex-start;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    @include lg {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-left: 0;
+    }
+    .map {
+      list-style: none;
+      margin-left: 2rem;
+      @include lg {
+        margin-left: 0;
+      }
+    }
   }
 }
 
@@ -124,6 +170,7 @@
   }
   .work-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     .work {
       border: .15rem solid $buttercup;
@@ -149,7 +196,11 @@
         text-align: center;
       }
       .work-name {
+        font-family: $primary-font-family;
         margin: .5rem 0;
+      }
+      .job-description {
+        font-family: $primary-font-family;;
       }
     }
   }
@@ -159,7 +210,7 @@
   #contact-form {
     color: white;
     background: $astronaut;
-    height: 100vh;
+    min-height: 100vh;
     .brand-tagline {
       border: none;
       padding: 0;
@@ -171,9 +222,10 @@
   .inline {
     align-items: flex-start;
     display: flex;
+    flex-wrap: wrap;
     text-align: left;
     .contact-label {
-      font-family: $secondary-font-family;
+      font-family: $primary-font-family;
       font-size: 1.5rem;
       margin: 0;
       text-transform: capitalize;
@@ -198,7 +250,9 @@
     background: $buttercup;
     border-radius: 0;
     color: white;
+    font-family: $primary-font-family;
     padding: .5rem;
+    text-transform: uppercase;
     width: 50%;
     &:hover {
       background: $dd_blue;
@@ -211,6 +265,8 @@
   }
   .footer .pure-menu-link {
     color: white;
+    font-family: $primary-font-family;
+    text-transform: uppercase;
     &:hover {
       background: $buttercup;
       transition: all .5s;
@@ -219,6 +275,7 @@
   .decoration-icons {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     i {
       color: $dd_blue;

@@ -1,9 +1,31 @@
 // ========== Fonts ==========
-@import url('https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic');
-@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
+@font-face {
+  font-family: 'Chalet';
+  src: url(font-path('Chalet-regular.eot'));
+  src: url(font-path('Chalet-regular.eot')),
+       url(font-path('Chalet-regular.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('Chalet-regular.woff2')) format('woff2'),
+       url(font-path('Chalet-regular.woff')) format('woff'),
+       url(font-path('Chalet-regular.ttf'))  format('truetype'),
+       url(font-path('Chalet-regular.svg') + "#montserratregular") format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Corbel';
+  src: url(font-path('corbel-regular.eot'));
+  src: url(font-path('corbel-regular.eot')),
+       url(font-path('corbel-regular.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('corbel-regular.woff2')) format('woff2'),
+       url(font-path('corbel-regular.woff')) format('woff'),
+       url(font-path('corbel-regular.ttf'))  format('truetype'),
+       url(font-path('corbel-regular.svg') + "#montserratregular") format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
 
-$primary-font-family: 'Lato', Helvetica, Arial, sans-serif, FontAwesome;
-$secondary-font-family: 'Oxygen', Helvetica, sans-serif;
+$primary-font-family: 'Corbel', Helvetica, Arial, sans-serif;
+$secondary-font-family: 'Chalet', Helvetica, sans-serif;
 $medium-font-size: 0.75rem;
 $small-font-size: 0.5rem;
 
