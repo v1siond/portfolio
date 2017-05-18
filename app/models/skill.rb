@@ -8,4 +8,9 @@ class Skill < ApplicationRecord
     '4 start': 4,
     '5 start': 5
   }
+
+  enum type_: {
+    'back-end': 1,
+    'front-end': 2,
+  }
 end

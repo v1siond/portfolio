@@ -4,10 +4,10 @@
       .sidebar.pure-u-1.pure-u-lg-1-4
         .header
           %h2.brand-avatar
-            %img.post-avatar{:alt => "Avatar", :src => "https://vignette2.wikia.nocookie.net/onepiece/images/6/61/Estatua_de_cera_de_Luffy.png/revision/latest?cb=20121231203632&path-prefix=es"}
+            %img.post-avatar{:alt => "Avatar", :src => "https://avatars3.githubusercontent.com/u/19172129?v=3&s=460"}
           %h2.brand-tagline About Me
           .text
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            %p I'm a developer, all my life I’ve been fascinated by technology and how we can improve this every day. The first day that I started learning Ruby I loved it and I knew that this is what I wanted to do! Now I truly feel like a Ruby on Rails engineer by all I've learned in my jobs.
       .presentation.pure-u-1.pure-u-lg-3-4
         %div
           %h1.brand-title.pure-u-1
@@ -30,116 +30,24 @@
       .skill-list.pure-u-1
         .skills-left.pure-u-1.pure-u-lg-1-2
           %ul.skill-description.pure-u-1
-            %li.skill.pure-u-1
-              %h4.skill-name.pure-u-1-4
-                HTML5
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-            %li.skill.pure-u-1
-              %h4.skill-name.pure-u-1-4
-                RUBY
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-            %li.skill.pure-u-1
-              %h4.skill-name.pure-u-1-4
-                HAML
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-            %li.skill.pure-u-1
-              %h4.skill-name.pure-u-1-4
-                JASMINE
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-            %li.skill.pure-u-1
-              %h4.skill-name.pure-u-1-4
-                CAPYBARA
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-            %li.skill.pure-u-1
-              %h4.skill-name.pure-u-1-4
-                WEBPACK
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
+            - @back_end_skills.each do |skill|
+              %li.skill.pure-u-1
+                %h4.skill-name.pure-u-1-4
+                  = skill.name
+                .skill-level.pure-u-3-4
+                  - star = skill.stars.to_i
+                  - 1.upto(star) do
+                    %i.fa.fa-star
         .skills-right.pure-u-1.pure-u-lg-1-2
           %ul.skill-description.pure-u-1
-            %li.skill.pure-u-1
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-              %h4.skill-name.pure-u-1-4
-                RAILS
-            %li.skill.pure-u-1
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-              %h4.skill-name.pure-u-1-4
-                JS
-            %li.skill.pure-u-1
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-              %h4.skill-name.pure-u-1-4
-                JQUERY
-            %li.skill.pure-u-1
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-              %h4.skill-name.pure-u-1-4
-                REACT
-            %li.skill.pure-u-1
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-              %h4.skill-name.pure-u-1-4
-                CSS
-            %li.skill.pure-u-1
-              .skill-level.pure-u-3-4
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-                %i.fa.fa-star
-              %h4.skill-name.pure-u-1-4
-                ANGULAR
+            - @front_end_skills.each do |skill|
+              %li.skill.pure-u-1
+                .skill-level.pure-u-3-4
+                  - star = skill.stars.to_i
+                  - 1.upto(star) do
+                    %i.fa.fa-star
+                %h4.skill-name.pure-u-1-4
+                  = skill.name
         %ul.skills-map.pure-u-1
           %li.map
             %i.fa.fa-star
@@ -175,30 +83,15 @@
         %h2.brand-tagline
           Work Experience
       .work-list.pure-u-1
-        .work.left.pure-u-1.pure-u-lg-7-24
-          %figure.work-background
-            =image_tag('capture1.jpg')
-          %header
-            %h4.work-name
-              DailyDrip
-          .job-description
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .work.center.pure-u-1.pure-u-lg-7-24
-          %figure.work-background
-            =image_tag('capture2.jpg')
-          %header
-            %h4.work-name
-              DailyDrip
-          .job-description
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .work.right.pure-u-1.pure-u-lg-7-24
-          %figure.work-background
-            =image_tag('capture3.jpg')
-          %header
-            %h4.work-name
-              DailyDrip
-          .job-description
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        - @projects.each do |project|
+          .work.left.pure-u-1.pure-u-lg-7-24
+            %figure.work-background
+              = image_tag(project.image_link.present? ? project.image_link : 'https://udemy-images.udemy.com/course/750x422/372518_57c2_6.jpg')
+            %header
+              %h4.work-name
+                = project.name
+            .job-description
+              %p= project.description
     %section.contact
       .prev-section
         %i.fa.fa-angle-double-up
@@ -215,6 +108,13 @@
           %dl.inline.contact-email
             = label_tag(:message, :message, :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
             = text_area_tag "message:", params[:message], autocomplete: "off", tabindex: '2', :class => 'pure-u-1 pure-u-lg-3-4 contact-area'
+            = text_field_tag "name", params[:name], autocomplete: "off", tabindex: '1', :class => 'pure-u-1 pure-u-lg-3-4 contact-input'
+          %dl.inline.contact-email
+            = label_tag(:email, :email, :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
+            = text_field_tag "email", params[:email], autocomplete: "off", tabindex: '2', :class => 'pure-u-1 pure-u-lg-3-4 contact-input'
+          %dl.inline.contact-email
+            = label_tag(:message, :message, :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
+            = text_area_tag "message", params[:message], autocomplete: "off", tabindex: '2', :class => 'pure-u-1 pure-u-lg-3-4 contact-area'
           %dl.inline.contact-email
             .pure-u-1-4
             = submit_tag "submit", class: "pure-button contact-button pure-u-1 pure-u-lg-3-4"
@@ -222,13 +122,12 @@
           .pure-menu.pure-menu-horizontal
             %ul
               %li.pure-menu-item
-                %a.pure-menu-link{target: "_blank", :href => "#"} Home
+                %a.pure-menu-link{target: "_blank", :href => "https://github.com/loldlm1"} GitHub
               %li.pure-menu-item
-                %a.pure-menu-link{target: "_blank", :href => ""} Twitter
-              %li.pure-menu-item
-                %a.pure-menu-link{target: "_blank", :href => ""} GitHub
+                %a.pure-menu-link{target: "_blank", :href => "https://angel.co/loldlm"} Angel
       .decoration-icons.pure-u-1.pure-u-lg-1-2
         .envelope
           %i.fa.fa-envelope
         .mobile
+          %i.fa.fa-mobile
           %i.fa.fa-mobile

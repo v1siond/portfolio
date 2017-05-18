@@ -1,3 +1,3 @@
 ActiveAdmin.register Skill do
-  permit_params :name, :starts, :user_id
+  permit_params :name, :stars, :type_, :user_id
 end

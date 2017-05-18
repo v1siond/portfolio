@@ -53,4 +53,21 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # Mailer used for devise in development
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'heroku.com',
+    authentication: 'plain',
+    enable_starttls_auto: true,
+    user_name: ENV["EMAIL"],
+    password: ENV["PASSWORD"]
+  }
+  # ActionMailer Config
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  # Set to false if you do not care if the mailer cannot send.
+  config.action_mailer.raise_delivery_errors = true
+  # Send email in development mode?
+  config.action_mailer.perform_deliveries = false
 end

@@ -7,5 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Creating the admin user
+<<<<<<< HEAD
 user = FactoryGirl.create(:user, :admin, email: ENV["EMAIL"], password: ENV["PASSWORD"])
+=======
+user = User.find_or_create_by!(email: ENV["EMAIL"]) do |user|
+        user.password = ENV["PASSWORD"]
+        user.password_confirmation = ENV["PASSWORD"]
+        user.admin!
+      end
+>>>>>>> f080e38e9520668d3ecf150d6d48b22fa4166908
 puts "User admin created successful -> email: #{user.email}"
