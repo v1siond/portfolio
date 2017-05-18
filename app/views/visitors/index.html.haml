@@ -108,13 +108,6 @@
           %dl.inline.contact-email
             = label_tag(:message, :message, :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
             = text_area_tag "message:", params[:message], autocomplete: "off", tabindex: '2', :class => 'pure-u-1 pure-u-lg-3-4 contact-area'
-            = text_field_tag "name", params[:name], autocomplete: "off", tabindex: '1', :class => 'pure-u-1 pure-u-lg-3-4 contact-input'
-          %dl.inline.contact-email
-            = label_tag(:email, :email, :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
-            = text_field_tag "email", params[:email], autocomplete: "off", tabindex: '2', :class => 'pure-u-1 pure-u-lg-3-4 contact-input'
-          %dl.inline.contact-email
-            = label_tag(:message, :message, :class => 'pure-u-1 pure-u-lg-1-4 contact-label')
-            = text_area_tag "message", params[:message], autocomplete: "off", tabindex: '2', :class => 'pure-u-1 pure-u-lg-3-4 contact-area'
           %dl.inline.contact-email
             .pure-u-1-4
             = submit_tag "submit", class: "pure-button contact-button pure-u-1 pure-u-lg-3-4"
@@ -129,5 +122,4 @@
         .envelope
           %i.fa.fa-envelope
         .mobile
-          %i.fa.fa-mobile
           %i.fa.fa-mobile
