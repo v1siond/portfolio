@@ -180,27 +180,45 @@
       font-weight: 400;
       margin-top: 1rem;
       padding: 1rem;
-      &.left {
-        box-shadow: -10px 10px 1px rgba(black, .4);
+      position: relative;
+      &:before {
+        background: black;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
       }
-      &.center {
-        box-shadow: 0px 10px 1px rgba(black, .4);
-      }
-      &.right {
-        box-shadow: 10px 10px 1px rgba(black, .4);
+      .work-background {
+        height: 100%;
+        left: 0;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
       header {
         font-family: $secondary-font-family;
         font-size: 2rem;
         font-weight: bold;
         text-align: center;
+        position: relative;
+        z-index: 2;
       }
       .work-name {
         font-family: $primary-font-family;
         margin: .5rem 0;
       }
       .job-description {
-        font-family: $primary-font-family;;
+        font-family: $primary-font-family;
+        position: relative;
+        z-index: 2;
       }
     }
   }
