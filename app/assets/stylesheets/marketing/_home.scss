@@ -223,6 +223,13 @@
       margin-top: 1rem;
       padding: 1rem;
       position: relative;
+      &:hover {
+        .job-contributions {
+          opacity: 1;
+          top: 100%;
+          transition: all 1s;
+        }
+      }
       &:before {
         background: black;
         content: '';
@@ -261,6 +268,19 @@
         font-family: $primary-font-family;
         position: relative;
         z-index: 2;
+      }
+    }
+    .job-contributions {
+      height: 100%;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      .contributions {
+        background: rgba(black, .4);
+        font-size: 1rem;
+        padding: 1rem 10%;
       }
     }
   }
