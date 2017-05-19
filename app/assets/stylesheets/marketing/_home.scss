@@ -224,10 +224,15 @@
       padding: 1rem;
       position: relative;
       &:hover {
+        .work-name,
+        .job-description {
+          opacity: 0;
+          transition: all 1s;
+        }
         .job-contributions {
           opacity: 1;
-          top: 100%;
           transition: all 1s;
+          z-index: 10;
         }
       }
       &:before {
@@ -278,7 +283,6 @@
       top: 0;
       width: 100%;
       .contributions {
-        background: rgba(black, .4);
         font-size: 1rem;
         padding: 1rem 10%;
       }
