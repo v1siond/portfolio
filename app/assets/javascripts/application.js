@@ -20,6 +20,9 @@ jQuery(document).ready(function($) {
   var i =0;
   var scrolto = 0;
   $('.prev-section').hide();
+  $('html, body').animate({
+        scrollTop: sections[0].offsetTop
+      }, 2000);
   function next(){
 
     if(i == 0){
