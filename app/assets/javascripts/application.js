@@ -19,12 +19,18 @@ jQuery(document).ready(function($) {
   var sections = $('section');
   var i =0;
   var scrolto = 0;
+  var height = $(window).height();
   $('.prev-section').hide();
   $('html, body').animate({
         scrollTop: sections[0].offsetTop
       }, 2000);
   function next(){
-
+    if (height < $(sections[i+1]).height()) {
+      $(sections[i+1]).css({
+        'overflow-y' : 'scroll',
+        'height' : '100vh'
+      });
+    }
     if(i == 0){
       $('.prev-section').show();
     }
@@ -32,9 +38,8 @@ jQuery(document).ready(function($) {
       i++;
       if(i == sections.length -1){
         $('.next-section').hide();
-        $('.prev-section').css('color', '#001A71');
       }
-       $('html, body').animate({
+      $('html, body').animate({
         scrollTop: sections[i].offsetTop
       }, 2000);
     }else{
@@ -42,16 +47,21 @@ jQuery(document).ready(function($) {
     }
   }
   function prev(){
+    if (height < $(sections[i+1]).height()) {
+      $(sections[i+1]).css({
+        'overflow-y' : 'scroll',
+        'height' : '100vh'
+      });
+    }
     if(i == sections.length -1){
       $('.next-section').show();
-      $('.prev-section').css('color', 'white');
     }
     if(i > 0){
       i--;
       if(i == 0){
         $('.prev-section').hide();
       }
-       $('html, body').animate({
+      $('html, body').animate({
         scrollTop: sections[i].offsetTop
       }, 2000);
     }

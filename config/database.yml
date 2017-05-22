@@ -25,12 +25,12 @@ staging:
 
 development:
   <<: *default
-  database: portfolio-development
+  database: portfolio-alex-development
 
 test:
   <<: *default
-  database: portfolio-test
+  database: portfolio-alex-test
 
 production:
   <<: *default
-  database: portfolio-production
+  database: portfolio-alex-production

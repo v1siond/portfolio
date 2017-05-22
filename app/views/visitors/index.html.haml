@@ -4,16 +4,16 @@
       .sidebar.pure-u-1.pure-u-lg-1-4
         .header
           %h2.brand-avatar
-            %img.post-avatar{:alt => "Avatar", :src => "https://avatars3.githubusercontent.com/u/19172129?v=3&s=460"}
+            %img.post-avatar{:alt => "Avatar", :src => "https://avatars2.githubusercontent.com/u/23365688?v=3&u=ec4717fe6b802a2d6dd5182d44782e1407f1e774&s=400"}
           %h2.brand-tagline About Me
           .text
-            %p I'm a developer, all my life I’ve been fascinated by technology and how we can improve this every day. The first day that I started learning Ruby I loved it and I knew that this is what I wanted to do! Now I truly feel like a Ruby on Rails engineer by all I've learned in my jobs.
+            %p System Engineer with 5 years of experience in software development, I'm passionate about programming and Computer Science and thinks that the proccess where the code transform into a great app is something fascinating. When i'm not coding, i'm practicing mma, playing drums or cooking.
       .presentation.pure-u-1.pure-u-lg-3-4
         %div
           %h1.brand-title.pure-u-1
-            Moises Torres
+            Alexander Pulido
           %h2.brand-tagline
-            Backend Developer
+            Frontend Developer
       .prev-section
         %i.fa.fa-angle-double-up
       .next-section
@@ -28,7 +28,7 @@
       .skill-list.pure-u-1
         .skills-left.pure-u-1.pure-u-lg-1-2
           %ul.skill-description.pure-u-1
-            - @back_end_skills.each do |skill|
+            - @front_end_skills.each do |skill|
               %li.skill.pure-u-1
                 %h4.skill-name.pure-u-1-4
                   = skill.name
@@ -38,7 +38,7 @@
                     %i.fa.fa-star
         .skills-right.pure-u-1.pure-u-lg-1-2
           %ul.skill-description.pure-u-1
-            - @front_end_skills.each do |skill|
+            - @back_end_skills.each do |skill|
               %li.skill.pure-u-1
                 .skill-level.pure-u-3-4
                   - star = skill.stars.to_i
@@ -78,7 +78,7 @@
           Work Experience
       .work-list.pure-u-1
         - @projects.each do |project|
-          .work.left.pure-u-1.pure-u-lg-7-24
+          %a{:href => "#{project.link}", :class => 'work left pure-u-1 pure-u-lg-7-24'}
             %figure.work-background
               = image_tag(project.image_link.present? ? project.image_link : 'https://udemy-images.udemy.com/course/750x422/372518_57c2_6.jpg')
             %header
