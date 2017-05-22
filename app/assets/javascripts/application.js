@@ -83,4 +83,15 @@ jQuery(document).ready(function($) {
      e.preventDefault();
      prev();
   });
+
+  $('.work').click(function(e){
+    e.preventDefault();
+    if ($(this).attr('href') == '#') {
+      i =0
+      $('.prev-section').hide();
+      $('html, body').animate({
+        scrollTop: sections[0].offsetTop
+      }, 2000);
+    }
+  });
 });
