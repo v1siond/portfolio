@@ -113,7 +113,9 @@
   .quote {
     color: white;
     font-family: $primary-font-family;
+    margin-bottom: 2rem;
     padding: 0 5%;
+    text-align: center;
     q {
       font-style: italic;
     }
@@ -122,6 +124,7 @@
     }
   }
   .title-container {
+    background: $astronaut;
     text-align: center;
     margin-bottom: 2rem;
   }
